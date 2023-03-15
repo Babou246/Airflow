@@ -1,0 +1,174 @@
+[2023-03-13T19:30:24.417+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T19:30:24.428+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T19:30:24.428+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:30:24.428+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-13T19:30:24.429+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:30:24.450+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): demarre_ELK> on 2023-03-13 00:00:15+00:00
+[2023-03-13T19:30:24.453+0000] {standard_task_runner.py:55} INFO - Started process 34881 to run task
+[2023-03-13T19:30:24.457+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'demarre_ELK', 'scheduled__2023-03-13T00:00:15+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmphx7imxiq']
+[2023-03-13T19:30:24.459+0000] {standard_task_runner.py:83} INFO - Job 14: Subtask demarre_ELK
+[2023-03-13T19:30:24.526+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [running]> on host dev
+[2023-03-13T19:30:24.590+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=demarre_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:15+00:00
+[2023-03-13T19:30:24.591+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T19:30:24.592+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker-compose -f /home/dev/soute/ELK/docker-compose.yml up -d']
+[2023-03-13T19:30:24.600+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T19:30:25.361+0000] {subprocess.py:93} INFO - elasticsearch is up-to-date
+[2023-03-13T19:30:25.362+0000] {subprocess.py:93} INFO - kibana is up-to-date
+[2023-03-13T19:30:25.415+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-13T19:30:25.595+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=demarre_ELK, execution_date=20230313T000015, start_date=20230313T193024, end_date=20230313T193025
+[2023-03-13T19:30:25.792+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-13T19:30:25.821+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-03-13T19:40:57.541+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T19:40:57.553+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T19:40:57.554+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:40:57.554+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-13T19:40:57.554+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:40:57.585+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): demarre_ELK> on 2023-03-13 00:00:15+00:00
+[2023-03-13T19:40:57.594+0000] {standard_task_runner.py:55} INFO - Started process 36919 to run task
+[2023-03-13T19:40:57.606+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'demarre_ELK', 'scheduled__2023-03-13T00:00:15+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpbyujimiy']
+[2023-03-13T19:40:57.609+0000] {standard_task_runner.py:83} INFO - Job 62: Subtask demarre_ELK
+[2023-03-13T19:40:57.678+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [running]> on host dev
+[2023-03-13T19:40:57.745+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=demarre_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:15+00:00
+[2023-03-13T19:40:57.747+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T19:40:57.748+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker-compose -f /home/dev/soute/ELK/docker-compose.yml up -d']
+[2023-03-13T19:40:57.756+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T19:40:58.547+0000] {subprocess.py:93} INFO - elasticsearch is up-to-date
+[2023-03-13T19:40:58.548+0000] {subprocess.py:93} INFO - kibana is up-to-date
+[2023-03-13T19:40:58.600+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-13T19:40:58.629+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=demarre_ELK, execution_date=20230313T000015, start_date=20230313T194057, end_date=20230313T194058
+[2023-03-13T19:40:58.660+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-13T19:40:58.685+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-03-13T20:02:23.652+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T20:02:23.664+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T20:02:23.664+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T20:02:23.664+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-13T20:02:23.664+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T20:02:23.685+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): demarre_ELK> on 2023-03-13 00:00:15+00:00
+[2023-03-13T20:02:23.688+0000] {standard_task_runner.py:55} INFO - Started process 40681 to run task
+[2023-03-13T20:02:23.693+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'demarre_ELK', 'scheduled__2023-03-13T00:00:15+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpvg3yan9i']
+[2023-03-13T20:02:23.695+0000] {standard_task_runner.py:83} INFO - Job 174: Subtask demarre_ELK
+[2023-03-13T20:02:23.762+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [running]> on host dev
+[2023-03-13T20:02:23.832+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=demarre_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:15+00:00
+[2023-03-13T20:02:23.834+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T20:02:23.835+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker-compose -f /home/dev/soute/ELK/docker-compose.yml up -d']
+[2023-03-13T20:02:23.844+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T20:02:24.666+0000] {subprocess.py:93} INFO - elasticsearch is up-to-date
+[2023-03-13T20:02:24.667+0000] {subprocess.py:93} INFO - kibana is up-to-date
+[2023-03-13T20:02:24.720+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-13T20:02:24.749+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=demarre_ELK, execution_date=20230313T000015, start_date=20230313T200223, end_date=20230313T200224
+[2023-03-13T20:02:24.786+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-13T20:02:24.813+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-03-13T20:27:52.157+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T20:27:52.169+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-13T20:27:52.170+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T20:27:52.170+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-13T20:27:52.170+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T20:27:52.191+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): demarre_ELK> on 2023-03-13 00:00:15+00:00
+[2023-03-13T20:27:52.195+0000] {standard_task_runner.py:55} INFO - Started process 45786 to run task
+[2023-03-13T20:27:52.199+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'demarre_ELK', 'scheduled__2023-03-13T00:00:15+00:00', '--job-id', '286', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp24y89faa']
+[2023-03-13T20:27:52.201+0000] {standard_task_runner.py:83} INFO - Job 286: Subtask demarre_ELK
+[2023-03-13T20:27:52.270+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [running]> on host dev
+[2023-03-13T20:27:52.350+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=demarre_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:15+00:00
+[2023-03-13T20:27:52.352+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T20:27:52.353+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker-compose -f /home/dev/soute/ELK/docker-compose.yml up -d']
+[2023-03-13T20:27:52.362+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T20:27:53.171+0000] {subprocess.py:93} INFO - elasticsearch is up-to-date
+[2023-03-13T20:27:53.172+0000] {subprocess.py:93} INFO - kibana is up-to-date
+[2023-03-13T20:27:53.228+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-13T20:27:53.255+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=demarre_ELK, execution_date=20230313T000015, start_date=20230313T202752, end_date=20230313T202753
+[2023-03-13T20:27:53.293+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-13T20:27:53.318+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-03-14T09:22:24.002+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-14T09:22:24.016+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-14T09:22:24.016+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-14T09:22:24.016+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-14T09:22:24.017+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-14T09:22:24.040+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): demarre_ELK> on 2023-03-13 00:00:15+00:00
+[2023-03-14T09:22:24.044+0000] {standard_task_runner.py:55} INFO - Started process 23666 to run task
+[2023-03-14T09:22:24.048+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'demarre_ELK', 'scheduled__2023-03-13T00:00:15+00:00', '--job-id', '530', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpn1f6df0c']
+[2023-03-14T09:22:24.050+0000] {standard_task_runner.py:83} INFO - Job 530: Subtask demarre_ELK
+[2023-03-14T09:22:24.128+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [running]> on host dev
+[2023-03-14T09:22:24.208+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=demarre_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:15+00:00
+[2023-03-14T09:22:24.210+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-14T09:22:24.211+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker-compose -f /home/dev/soute/ELK/docker-compose.yml up -d']
+[2023-03-14T09:22:24.221+0000] {subprocess.py:86} INFO - Output:
+[2023-03-14T09:22:25.171+0000] {subprocess.py:93} INFO - elasticsearch is up-to-date
+[2023-03-14T09:22:25.172+0000] {subprocess.py:93} INFO - kibana is up-to-date
+[2023-03-14T09:22:25.240+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-14T09:22:25.267+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=demarre_ELK, execution_date=20230313T000015, start_date=20230314T092224, end_date=20230314T092225
+[2023-03-14T09:22:25.303+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-14T09:22:25.328+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-03-15T07:08:25.302+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-15T07:08:25.308+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [queued]>
+[2023-03-15T07:08:25.308+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T07:08:25.308+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-15T07:08:25.308+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T07:08:25.320+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): demarre_ELK> on 2023-03-13 00:00:15+00:00
+[2023-03-15T07:08:25.322+0000] {standard_task_runner.py:55} INFO - Started process 116788 to run task
+[2023-03-15T07:08:25.323+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'demarre_ELK', 'scheduled__2023-03-13T00:00:15+00:00', '--job-id', '654', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpnlw30mzi']
+[2023-03-15T07:08:25.324+0000] {standard_task_runner.py:83} INFO - Job 654: Subtask demarre_ELK
+[2023-03-15T07:08:25.353+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.demarre_ELK scheduled__2023-03-13T00:00:15+00:00 [running]> on host dev
+[2023-03-15T07:08:25.387+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=demarre_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:15+00:00
+[2023-03-15T07:08:25.388+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-15T07:08:25.388+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker-compose -f /home/dev/soute/ELK/docker-compose.yml up -d']
+[2023-03-15T07:08:25.392+0000] {subprocess.py:86} INFO - Output:
+[2023-03-15T07:08:25.696+0000] {subprocess.py:93} INFO - elasticsearch is up-to-date
+[2023-03-15T07:08:25.697+0000] {subprocess.py:93} INFO - kibana is up-to-date
+[2023-03-15T07:08:25.719+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-15T07:08:25.734+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=demarre_ELK, execution_date=20230313T000015, start_date=20230315T070825, end_date=20230315T070825
+[2023-03-15T07:08:25.776+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-15T07:08:25.800+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

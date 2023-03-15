@@ -1,0 +1,176 @@
+[2023-03-13T21:13:17.732+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [queued]>
+[2023-03-13T21:13:17.750+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [queued]>
+[2023-03-13T21:13:17.750+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T21:13:17.750+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 4
+[2023-03-13T21:13:17.751+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T21:13:17.777+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): Chargement_des_données_in_ELK> on 2023-03-13 00:01:30+00:00
+[2023-03-13T21:13:17.781+0000] {standard_task_runner.py:55} INFO - Started process 56134 to run task
+[2023-03-13T21:13:17.786+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'Chargement_des_données_in_ELK', 'scheduled__2023-03-13T00:01:30+00:00', '--job-id', '339', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp8ciwmae9']
+[2023-03-13T21:13:17.788+0000] {standard_task_runner.py:83} INFO - Job 339: Subtask Chargement_des_données_in_ELK
+[2023-03-13T21:13:17.877+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [running]> on host dev
+[2023-03-13T21:13:17.964+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=Chargement_des_données_in_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:01:30+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:01:30+00:00
+[2023-03-13T21:13:17.967+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T21:13:17.968+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo dev | sudo -S /usr/share/logstash/bin/logstash --path.settings=/etc/logstash/ -f /etc/logstash/conf.d/data.conf']
+[2023-03-13T21:13:17.979+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T21:13:18.080+0000] {subprocess.py:93} INFO - [sudo] Mot de passe de dev : Using bundled JDK: /usr/share/logstash/jdk
+[2023-03-13T21:13:18.420+0000] {subprocess.py:93} INFO - OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+[2023-03-13T21:13:44.520+0000] {subprocess.py:93} INFO - Sending Logstash logs to /var/log/logstash which is now configured via log4j2.properties
+[2023-03-13T21:13:44.640+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:44,637][INFO ][logstash.runner          ] Log4j configuration path used is: /etc/logstash/log4j2.properties
+[2023-03-13T21:13:44.651+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:44,650][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.15.2", "jruby.version"=>"jruby 9.2.19.0 (2.5.8) 2021-06-15 55810c552b OpenJDK 64-Bit Server VM 11.0.12+7 on 11.0.12+7 +indy +jit [linux-x86_64]"}
+[2023-03-13T21:13:45.254+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:45,253][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2023-03-13T21:13:47.187+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:47,186][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2023-03-13T21:13:48.080+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:48,079][INFO ][org.reflections.Reflections] Reflections took 139 ms to scan 1 urls, producing 120 keys and 417 values
+[2023-03-13T21:13:49.745+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:49,744][INFO ][logstash.outputs.elasticsearch][main] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2023-03-13T21:13:50.195+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:50,192][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2023-03-13T21:13:50.415+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:50,414][WARN ][logstash.outputs.elasticsearch][main] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2023-03-13T21:13:50.493+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:50,493][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch version determined (7.15.2) {:es_version=>7}
+[2023-03-13T21:13:50.497+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:50,497][WARN ][logstash.outputs.elasticsearch][main] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>7}
+[2023-03-13T21:13:50.722+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:50,719][INFO ][logstash.outputs.elasticsearch][main] Using a default mapping template {:es_version=>7, :ecs_compatibility=>:disabled}
+[2023-03-13T21:13:50.779+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:50,779][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>8, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>1000, "pipeline.sources"=>["/etc/logstash/conf.d/data.conf"], :thread=>"#<Thread:0xe1c203c run>"}
+[2023-03-13T21:13:51.948+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:51,947][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>1.16}
+[2023-03-13T21:13:52.088+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:52,087][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2023-03-13T21:13:52.203+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:52,203][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2023-03-13T21:13:53.734+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:53,733][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.024893s) SELECT CAST(current_setting('server_version_num') AS integer) AS v
+[2023-03-13T21:13:54.008+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:54,007][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.096875s) SELECT count(*) AS "count" FROM (SELECT * FROM customers) AS "t1" LIMIT 1
+[2023-03-13T21:13:54.438+0000] {subprocess.py:93} INFO - [2023-03-13T21:13:54,438][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.399991s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 0
+[2023-03-13T21:14:02.384+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:02,384][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.406050s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 50000
+[2023-03-13T21:14:08.922+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:08,922][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.422516s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 100000
+[2023-03-13T21:14:13.211+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:13,211][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.339699s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 150000
+[2023-03-13T21:14:16.870+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:16,870][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.377136s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 200000
+[2023-03-13T21:14:20.654+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:20,653][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.368528s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 250000
+[2023-03-13T21:14:23.785+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:23,784][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.108749s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 300000
+[2023-03-13T21:14:26.255+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:26,255][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.125614s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 350000
+[2023-03-13T21:14:28.629+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:28,629][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.130772s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 400000
+[2023-03-13T21:14:30.987+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:30,987][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.158975s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 450000
+[2023-03-13T21:14:33.759+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:33,758][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.183513s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 500000
+[2023-03-13T21:14:36.648+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:36,647][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.154267s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 550000
+[2023-03-13T21:14:39.086+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:39,085][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.137482s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 600000
+[2023-03-13T21:14:41.590+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:41,590][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.172650s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 650000
+[2023-03-13T21:14:44.143+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:44,143][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.178302s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 700000
+[2023-03-13T21:14:46.737+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:46,737][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.163892s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 750000
+[2023-03-13T21:14:49.089+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:49,089][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.153331s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 800000
+[2023-03-13T21:14:51.730+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:51,730][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.162805s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 850000
+[2023-03-13T21:14:54.288+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:54,288][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.165921s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 900000
+[2023-03-13T21:14:56.734+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:56,734][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.202312s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 950000
+[2023-03-13T21:14:59.131+0000] {subprocess.py:93} INFO - [2023-03-13T21:14:59,131][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.174865s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 1000000
+[2023-03-13T21:15:03.030+0000] {subprocess.py:93} INFO - [2023-03-13T21:15:03,030][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.281791s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 1050000
+[2023-03-13T21:15:11.290+0000] {subprocess.py:93} INFO - [2023-03-13T21:15:11,290][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.181083s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 1100000
+[2023-03-13T21:15:13.811+0000] {subprocess.py:93} INFO - [2023-03-13T21:15:13,811][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.206563s) SELECT * FROM (SELECT * FROM customers) AS "t1" LIMIT 50000 OFFSET 1150000
+[2023-03-13T21:15:16.842+0000] {subprocess.py:93} INFO - [2023-03-13T21:15:16,842][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2023-03-13T21:15:17.086+0000] {subprocess.py:93} INFO - [2023-03-13T21:15:17,085][INFO ][logstash.pipelinesregistry] Removed pipeline from registry successfully {:pipeline_id=>:main}
+[2023-03-13T21:15:17.133+0000] {subprocess.py:93} INFO - [2023-03-13T21:15:17,133][INFO ][logstash.runner          ] Logstash shut down.
+[2023-03-13T21:15:17.334+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-13T21:15:17.365+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=Chargement_des_données_in_ELK, execution_date=20230313T000130, start_date=20230313T211317, end_date=20230313T211517
+[2023-03-13T21:15:17.412+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-13T21:15:17.428+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-03-14T09:52:48.118+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [queued]>
+[2023-03-14T09:52:48.132+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [queued]>
+[2023-03-14T09:52:48.132+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-14T09:52:48.132+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 4
+[2023-03-14T09:52:48.132+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-14T09:52:48.153+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): Chargement_des_données_in_ELK> on 2023-03-13 00:01:30+00:00
+[2023-03-14T09:52:48.156+0000] {standard_task_runner.py:55} INFO - Started process 31916 to run task
+[2023-03-14T09:52:48.161+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'Chargement_des_données_in_ELK', 'scheduled__2023-03-13T00:01:30+00:00', '--job-id', '583', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpi8oekyx8']
+[2023-03-14T09:52:48.163+0000] {standard_task_runner.py:83} INFO - Job 583: Subtask Chargement_des_données_in_ELK
+[2023-03-14T09:52:48.230+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [running]> on host dev
+[2023-03-14T09:52:48.305+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=Chargement_des_données_in_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:01:30+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:01:30+00:00
+[2023-03-14T09:52:48.307+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-14T09:52:48.308+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo dev | sudo -S /usr/share/logstash/bin/logstash --path.settings=/etc/logstash/ -f /etc/logstash/conf.d/data.conf']
+[2023-03-14T09:52:48.315+0000] {subprocess.py:86} INFO - Output:
+[2023-03-14T09:52:48.401+0000] {subprocess.py:93} INFO - [sudo] Mot de passe de dev : Using bundled JDK: /usr/share/logstash/jdk
+[2023-03-14T09:52:48.650+0000] {subprocess.py:93} INFO - OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+[2023-03-14T09:53:10.246+0000] {subprocess.py:93} INFO - Sending Logstash logs to /var/log/logstash which is now configured via log4j2.properties
+[2023-03-14T09:53:10.370+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:10,367][INFO ][logstash.runner          ] Log4j configuration path used is: /etc/logstash/log4j2.properties
+[2023-03-14T09:53:10.383+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:10,382][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.15.2", "jruby.version"=>"jruby 9.2.19.0 (2.5.8) 2021-06-15 55810c552b OpenJDK 64-Bit Server VM 11.0.12+7 on 11.0.12+7 +indy +jit [linux-x86_64]"}
+[2023-03-14T09:53:10.820+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:10,820][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2023-03-14T09:53:12.521+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:12,520][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2023-03-14T09:53:13.184+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:13,184][INFO ][org.reflections.Reflections] Reflections took 113 ms to scan 1 urls, producing 120 keys and 417 values
+[2023-03-14T09:53:14.567+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:14,566][INFO ][logstash.outputs.elasticsearch][main] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2023-03-14T09:53:14.949+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:14,947][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2023-03-14T09:53:15.148+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:15,148][WARN ][logstash.outputs.elasticsearch][main] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2023-03-14T09:53:15.211+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:15,211][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch version determined (7.15.2) {:es_version=>7}
+[2023-03-14T09:53:15.215+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:15,215][WARN ][logstash.outputs.elasticsearch][main] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>7}
+[2023-03-14T09:53:15.432+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:15,431][INFO ][logstash.outputs.elasticsearch][main] Using a default mapping template {:es_version=>7, :ecs_compatibility=>:disabled}
+[2023-03-14T09:53:15.475+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:15,474][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>8, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>1000, "pipeline.sources"=>["/etc/logstash/conf.d/data.conf"], :thread=>"#<Thread:0x79a63dc7 run>"}
+[2023-03-14T09:53:16.590+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:16,590][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>1.11}
+[2023-03-14T09:53:16.697+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:16,696][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2023-03-14T09:53:16.803+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:16,802][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2023-03-14T09:53:18.234+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:18,233][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.025662s) SELECT CAST(current_setting('server_version_num') AS integer) AS v
+[2023-03-14T09:53:18.402+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:18,401][ERROR][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] Java::OrgPostgresqlUtil::PSQLException: ERROR: relation "customers" does not exist
+[2023-03-14T09:53:18.402+0000] {subprocess.py:93} INFO -   Position : 48: SELECT count(*) AS "count" FROM (SELECT * FROM customers) AS "t1" LIMIT 1
+[2023-03-14T09:53:18.427+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:18,427][WARN ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] Exception when executing JDBC query {:exception=>"Java::OrgPostgresqlUtil::PSQLException: ERROR: relation \"customers\" does not exist\n  Position : 48"}
+[2023-03-14T09:53:19.322+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:19,321][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2023-03-14T09:53:19.376+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:19,375][INFO ][logstash.pipelinesregistry] Removed pipeline from registry successfully {:pipeline_id=>:main}
+[2023-03-14T09:53:19.419+0000] {subprocess.py:93} INFO - [2023-03-14T09:53:19,419][INFO ][logstash.runner          ] Logstash shut down.
+[2023-03-14T09:53:19.539+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-14T09:53:19.566+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=Chargement_des_données_in_ELK, execution_date=20230313T000130, start_date=20230314T095248, end_date=20230314T095319
+[2023-03-14T09:53:19.591+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-14T09:53:19.604+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-03-15T07:17:34.326+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [queued]>
+[2023-03-15T07:17:34.332+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [queued]>
+[2023-03-15T07:17:34.332+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T07:17:34.332+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 4
+[2023-03-15T07:17:34.332+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-15T07:17:34.343+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): Chargement_des_données_in_ELK> on 2023-03-13 00:01:30+00:00
+[2023-03-15T07:17:34.345+0000] {standard_task_runner.py:55} INFO - Started process 121662 to run task
+[2023-03-15T07:17:34.347+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'Chargement_des_données_in_ELK', 'scheduled__2023-03-13T00:01:30+00:00', '--job-id', '708', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpttucca34']
+[2023-03-15T07:17:34.348+0000] {standard_task_runner.py:83} INFO - Job 708: Subtask Chargement_des_données_in_ELK
+[2023-03-15T07:17:34.378+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:01:30+00:00 [running]> on host dev
+[2023-03-15T07:17:34.415+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=Chargement_des_données_in_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:01:30+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:01:30+00:00
+[2023-03-15T07:17:34.416+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-15T07:17:34.416+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo dev | sudo -S /usr/share/logstash/bin/logstash --path.settings=/etc/logstash/ -f /etc/logstash/conf.d/data.conf']
+[2023-03-15T07:17:34.420+0000] {subprocess.py:86} INFO - Output:
+[2023-03-15T07:17:34.455+0000] {subprocess.py:93} INFO - [sudo] Mot de passe de dev : Using bundled JDK: /usr/share/logstash/jdk
+[2023-03-15T07:17:34.580+0000] {subprocess.py:93} INFO - OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+[2023-03-15T07:17:44.916+0000] {subprocess.py:93} INFO - Sending Logstash logs to /var/log/logstash which is now configured via log4j2.properties
+[2023-03-15T07:17:44.978+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:44,977][INFO ][logstash.runner          ] Log4j configuration path used is: /etc/logstash/log4j2.properties
+[2023-03-15T07:17:44.984+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:44,984][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.15.2", "jruby.version"=>"jruby 9.2.19.0 (2.5.8) 2021-06-15 55810c552b OpenJDK 64-Bit Server VM 11.0.12+7 on 11.0.12+7 +indy +jit [linux-x86_64]"}
+[2023-03-15T07:17:45.189+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:45,189][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2023-03-15T07:17:45.980+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:45,979][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2023-03-15T07:17:46.392+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:46,392][INFO ][org.reflections.Reflections] Reflections took 77 ms to scan 1 urls, producing 120 keys and 417 values
+[2023-03-15T07:17:47.136+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:47,135][INFO ][logstash.outputs.elasticsearch][main] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["//localhost:9200"]}
+[2023-03-15T07:17:47.341+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:47,340][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://localhost:9200/]}}
+[2023-03-15T07:17:47.448+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:47,448][WARN ][logstash.outputs.elasticsearch][main] Restored connection to ES instance {:url=>"http://localhost:9200/"}
+[2023-03-15T07:17:47.480+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:47,480][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch version determined (7.15.2) {:es_version=>7}
+[2023-03-15T07:17:47.482+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:47,481][WARN ][logstash.outputs.elasticsearch][main] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>7}
+[2023-03-15T07:17:47.568+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:47,568][INFO ][logstash.outputs.elasticsearch][main] Using a default mapping template {:es_version=>7, :ecs_compatibility=>:disabled}
+[2023-03-15T07:17:47.599+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:47,599][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>8, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>1000, "pipeline.sources"=>["/etc/logstash/conf.d/data.conf"], :thread=>"#<Thread:0x8c86ebe run>"}
+[2023-03-15T07:17:48.109+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:48,109][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.51}
+[2023-03-15T07:17:48.167+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:48,167][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2023-03-15T07:17:48.233+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:48,232][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2023-03-15T07:17:48.920+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:48,919][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.016989s) SELECT CAST(current_setting('server_version_num') AS integer) AS v
+[2023-03-15T07:17:49.010+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:49,010][INFO ][logstash.inputs.jdbc     ][main][afa454a497099ce3438919c7cfc7ae10a3b3980082608321cda443e0b5f70dbd] (0.001332s) SELECT count(*) AS "count" FROM (SELECT * FROM customers) AS "t1" LIMIT 1
+[2023-03-15T07:17:49.531+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:49,531][INFO ][logstash.javapipeline    ][main] Pipeline terminated {"pipeline.id"=>"main"}
+[2023-03-15T07:17:49.781+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:49,781][INFO ][logstash.pipelinesregistry] Removed pipeline from registry successfully {:pipeline_id=>:main}
+[2023-03-15T07:17:49.806+0000] {subprocess.py:93} INFO - [2023-03-15T07:17:49,805][INFO ][logstash.runner          ] Logstash shut down.
+[2023-03-15T07:17:49.849+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-15T07:17:49.865+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=AUTOMATISATION, task_id=Chargement_des_données_in_ELK, execution_date=20230313T000130, start_date=20230315T071734, end_date=20230315T071749
+[2023-03-15T07:17:49.882+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-15T07:17:49.887+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,102 @@
+[2023-03-13T19:35:04.659+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [queued]>
+[2023-03-13T19:35:04.672+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [queued]>
+[2023-03-13T19:35:04.672+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:35:04.672+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 4
+[2023-03-13T19:35:04.673+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:35:04.694+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): Chargement_des_données_in_ELK> on 2023-03-13 00:00:03+00:00
+[2023-03-13T19:35:04.698+0000] {standard_task_runner.py:55} INFO - Started process 35784 to run task
+[2023-03-13T19:35:04.702+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'Chargement_des_données_in_ELK', 'scheduled__2023-03-13T00:00:03+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpssn7l6s9']
+[2023-03-13T19:35:04.704+0000] {standard_task_runner.py:83} INFO - Job 36: Subtask Chargement_des_données_in_ELK
+[2023-03-13T19:35:04.773+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [running]> on host dev
+[2023-03-13T19:35:04.838+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=Chargement_des_données_in_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:03+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:03+00:00
+[2023-03-13T19:35:04.840+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T19:35:04.841+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '/usr/bin/logstash --path.config /etc/logstash/conf.d/data.conf']
+[2023-03-13T19:35:04.849+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T19:35:04.851+0000] {subprocess.py:93} INFO - /usr/bin/bash: ligne 1: /usr/bin/logstash: Aucun fichier ou dossier de ce type
+[2023-03-13T19:35:04.851+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2023-03-13T19:35:04.861+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/dev/airflow/airflow/lib/python3.10/site-packages/airflow/operators/bash.py", line 196, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2023-03-13T19:35:04.867+0000] {taskinstance.py:1318} INFO - Marking task as UP_FOR_RETRY. dag_id=AUTOMATISATION, task_id=Chargement_des_données_in_ELK, execution_date=20230313T000003, start_date=20230313T193504, end_date=20230313T193504
+[2023-03-13T19:35:04.885+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 36 for task Chargement_des_données_in_ELK (Bash command failed. The command returned a non-zero exit code 127.; 35784)
+[2023-03-13T19:35:04.913+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-13T19:35:04.933+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-03-13T19:45:39.051+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [queued]>
+[2023-03-13T19:45:39.065+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [queued]>
+[2023-03-13T19:45:39.065+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:45:39.065+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 4
+[2023-03-13T19:45:39.066+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T19:45:39.087+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): Chargement_des_données_in_ELK> on 2023-03-13 00:00:03+00:00
+[2023-03-13T19:45:39.091+0000] {standard_task_runner.py:55} INFO - Started process 37728 to run task
+[2023-03-13T19:45:39.095+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'Chargement_des_données_in_ELK', 'scheduled__2023-03-13T00:00:03+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpeai5ey8a']
+[2023-03-13T19:45:39.097+0000] {standard_task_runner.py:83} INFO - Job 84: Subtask Chargement_des_données_in_ELK
+[2023-03-13T19:45:39.164+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [running]> on host dev
+[2023-03-13T19:45:39.230+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=Chargement_des_données_in_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:03+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:03+00:00
+[2023-03-13T19:45:39.232+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T19:45:39.233+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'bin/logstash --path.config /etc/logstash/conf.d/data.conf']
+[2023-03-13T19:45:39.242+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T19:45:39.244+0000] {subprocess.py:93} INFO - /usr/bin/bash: ligne 1: bin/logstash: Aucun fichier ou dossier de ce type
+[2023-03-13T19:45:39.244+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2023-03-13T19:45:39.255+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/dev/airflow/airflow/lib/python3.10/site-packages/airflow/operators/bash.py", line 196, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2023-03-13T19:45:39.260+0000] {taskinstance.py:1318} INFO - Marking task as UP_FOR_RETRY. dag_id=AUTOMATISATION, task_id=Chargement_des_données_in_ELK, execution_date=20230313T000003, start_date=20230313T194539, end_date=20230313T194539
+[2023-03-13T19:45:39.281+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 84 for task Chargement_des_données_in_ELK (Bash command failed. The command returned a non-zero exit code 127.; 37728)
+[2023-03-13T19:45:39.306+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-13T19:45:39.325+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-03-13T20:07:03.769+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [queued]>
+[2023-03-13T20:07:03.782+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [queued]>
+[2023-03-13T20:07:03.782+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T20:07:03.783+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 4
+[2023-03-13T20:07:03.783+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13T20:07:03.804+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): Chargement_des_données_in_ELK> on 2023-03-13 00:00:03+00:00
+[2023-03-13T20:07:03.807+0000] {standard_task_runner.py:55} INFO - Started process 41609 to run task
+[2023-03-13T20:07:03.812+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'AUTOMATISATION', 'Chargement_des_données_in_ELK', 'scheduled__2023-03-13T00:00:03+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmphndv6sw8']
+[2023-03-13T20:07:03.814+0000] {standard_task_runner.py:83} INFO - Job 196: Subtask Chargement_des_données_in_ELK
+[2023-03-13T20:07:03.883+0000] {task_command.py:388} INFO - Running <TaskInstance: AUTOMATISATION.Chargement_des_données_in_ELK scheduled__2023-03-13T00:00:03+00:00 [running]> on host dev
+[2023-03-13T20:07:03.950+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AUTOMATISATION
+AIRFLOW_CTX_TASK_ID=Chargement_des_données_in_ELK
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T00:00:03+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T00:00:03+00:00
+[2023-03-13T20:07:03.952+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-13T20:07:03.953+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'bin/logstash -f /home/dev/etc/logstash/conf.d/data.conf']
+[2023-03-13T20:07:03.961+0000] {subprocess.py:86} INFO - Output:
+[2023-03-13T20:07:03.963+0000] {subprocess.py:93} INFO - /usr/bin/bash: ligne 1: bin/logstash: Aucun fichier ou dossier de ce type
+[2023-03-13T20:07:03.963+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2023-03-13T20:07:03.974+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/dev/airflow/airflow/lib/python3.10/site-packages/airflow/operators/bash.py", line 196, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2023-03-13T20:07:03.978+0000] {taskinstance.py:1318} INFO - Marking task as UP_FOR_RETRY. dag_id=AUTOMATISATION, task_id=Chargement_des_données_in_ELK, execution_date=20230313T000003, start_date=20230313T200703, end_date=20230313T200703
+[2023-03-13T20:07:03.997+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 196 for task Chargement_des_données_in_ELK (Bash command failed. The command returned a non-zero exit code 127.; 41609)
+[2023-03-13T20:07:04.023+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-13T20:07:04.042+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
